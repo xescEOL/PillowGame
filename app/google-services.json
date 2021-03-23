@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "439796383066",
+    "firebase_url": "https://pillow-2b9cd-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pillow-2b9cd",
+    "storage_bucket": "pillow-2b9cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439796383066:android:2587520564fdc58cff8763",
+        "android_client_info": {
+          "package_name": "com.rumbagames.pillowgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439796383066-7ie7q80jrfsl5550paj4tu9vjsaoit4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOnUxlvngwb3UQMlcPtV3ooOWQvPUDZbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439796383066-7ie7q80jrfsl5550paj4tu9vjsaoit4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
