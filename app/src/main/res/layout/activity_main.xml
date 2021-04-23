@@ -1,93 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/background1"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/logoLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="10"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="114dp">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:layout_marginTop="90sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginBottom="70sp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:keepScreenOn="false"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/pillowlogo" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PILLOW GAME"
-                android:textAlignment="center"
-                android:textSize="36sp" />
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/vanillaextract"
+            android:text="nombre"
+            android:textAlignment="center"
+            android:textColor="@color/paleta_negro"
+            android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/nombre_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+        <EditText
+            android:id="@+id/nombre_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="120sp"
+            android:layout_marginRight="120sp"
+            android:digits="abcdefghijklmnopqrstuvwxyzñQWERTYUIOPASDFGHJKLÑZXCVBNMÇç·0123456789 "
+            android:ems="10"
+            android:fontFamily="@font/vanillaextract"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/paleta_negro"
+            android:textSize="22sp" />
 
-            <Button
-                android:id="@+id/create_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/create_game"
-                android:onClick="openCreate"/>
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/join_game" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom|end"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@android:drawable/ic_menu_preferences" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@android:drawable/ic_lock_power_off" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/boto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoLayout"
+        android:layout_marginTop="30sp">
+
+        <Button
+            android:id="@+id/imageButt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="60sp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/vanillaextract"
+            android:foregroundGravity="center"
+            android:onClick="openCreate"
+            android:text="crear partida"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:onClick="openCreate"
+            app:srcCompat="@drawable/boton1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boto1"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="15sp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="60sp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/vanillaextract"
+            android:foregroundGravity="center"
+            android:text="unirse a partida"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/boton2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boto3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boto2"
+        android:layout_marginTop="15sp">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="60sp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/vanillaextract"
+            android:foregroundGravity="center"
+            android:text="salir"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120sp"
+            android:layout_marginRight="120sp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/boton3" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/vanillaextract"
+        android:text="rumba games"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

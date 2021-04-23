@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText nombreTxt = (EditText) findViewById(R.id.nombre_txt);
         SharedPreferences prefs = getSharedPreferences("config", Context.MODE_PRIVATE);
+
         nombreTxt.setText(prefs.getString("nombre", ""));
 
         nombreTxt.addTextChangedListener(new TextWatcher() {
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openCreate(View view) {
         Intent intent = new Intent(this, EsperandoJugadores.class);
+        intent.putExtra("master", true);
         startActivity(intent);
     }
 }
