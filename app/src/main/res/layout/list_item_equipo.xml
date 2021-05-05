@@ -1,45 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?attr/listPreferredItemHeight"
     android:orientation="vertical"
-    android:paddingBottom="8dp"
-    android:paddingTop="8dp">
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
 
-    <TextView
-        android:id="@+id/equipotxt"
+    <ImageView
+        android:id="@+id/equipobg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="13dp"
+        android:adjustViewBounds="true"
+        android:focusableInTouchMode="false"
+        android:forceHasOverlappingRendering="false"
+        app:srcCompat="@drawable/lista1y" />
+
+    <RelativeLayout
+        android:id="@+id/circulo_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/circulo" />
+
+        <TextView
+            android:id="@+id/equipotxt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="false"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/vanillaextract"
+            android:paddingRight="3dp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/jugador1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="56dp"
-            android:text="j1" />
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/jugador2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="56dp"
-            android:text="j2" />
+            <TextView
+                android:id="@+id/jugador1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/vanillaextract"
+                android:text="j1"
+                android:textColor="@color/paleta_negro"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/jugador2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/vanillaextract"
+                android:text="j2"
+                android:textColor="@color/paleta_negro"
+                android:textSize="20sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/jugador3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="56dp"
-            android:text="j3" />
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:fontFamily="@font/vanillaextract"
+            android:text="j3"
+            android:textColor="@color/paleta_negro"
+            android:textSize="20sp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/equiponuevo_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/vanillaextract"
+        android:text="equipo nuevo"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible" />
 
 </RelativeLayout>

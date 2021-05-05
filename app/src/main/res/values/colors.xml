@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="paleta_negro">#333333</color>
+    <color name="paleta_azulclaro">#39BBCB</color>
+    <color name="paleta_azul">#0290B6</color>
+    <color name="paleta_amarillo">#FAD70B</color>
+    <color name="paleta_verde">#D3DE16</color>
+    <color name="paleta_naranja">#FF7C18</color>
 </resources>
